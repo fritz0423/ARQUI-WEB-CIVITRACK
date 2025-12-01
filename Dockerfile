@@ -10,6 +10,9 @@ COPY mvnw ./
 COPY .mvn ./.mvn
 COPY src ./src
 
+# Dale permisos de ejecución a mvnw
+RUN chmod +x mvnw
+
 # Construimos la app con Maven y saltamos los tests
 RUN ./mvnw clean package -DskipTests
 
