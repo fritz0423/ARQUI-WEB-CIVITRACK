@@ -66,7 +66,7 @@ public class WebSecurityConfig {
                 .authorizeHttpRequests(req -> req
                         .requestMatchers("/login").permitAll()
                         .requestMatchers("/usuarios").permitAll()
-                      /*  .requestMatchers("/usuarios/**").permitAll()
+                       .requestMatchers("/usuarios/**").permitAll()
                         .requestMatchers("/roles/**").permitAll()
                         .requestMatchers("/universidades/**").permitAll()
                         .requestMatchers("/conductores/**").permitAll()
@@ -75,7 +75,7 @@ public class WebSecurityConfig {
                         .requestMatchers("/reportes/**").permitAll()
                         .requestMatchers("/vehiculos/**").permitAll()
                         .requestMatchers("/puntosusuario/**").permitAll()
-                        .requestMatchers("/ubicaciones/**").permitAll()*/
+                        .requestMatchers("/ubicaciones/**").permitAll()
                         .requestMatchers(SWAGGER_WHITELIST).permitAll()
                         .anyRequest().authenticated()
                 )
